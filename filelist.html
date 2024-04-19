@@ -1,40 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <title> Evan GitHub Filelist </title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, red, white);
+            background-size: 100vw 100vh;
+            font-family: 'Courier New', Courier, monospace;
+        }
 
+        a {
+            color:black;
+        }
+
+
+        a:hover {
+            color:hotpink;
+        }
+
+        a:active {
+            color:blue;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        #list {
+            font-size: larger;
+        }
+
+
+    </style>
 </head>
 
-<body>
-    <p id="files"></p>
+<body onload="githubFilelist()">
+    <div id="container">
+        <div id="title">
+            <h1> Evan's GitHub Repository File List </h1>
+        </div>
 
-    <script type="module">
+        <div id="list">
+            <ul></ul>
+        </div>
+    </div>
 
-        function githubFilelist() {
-
-            var htmlString = "";
-
-            // this creates JS object 'data' with a list of files  
-            // change "aptokash/SD330" to your github id and repository name 
-            (async () => {
-                const response = await fetch("https://api.github.com/repos/evanbrown757/SD330/contents/");
-                const data = await response.json();
-
-                // loop through the list of files, set "file" to each file name
-                for (let file of data) {
-
-                    fname = file.name;
-                    fpath = "https://evanbrown757.github.io/SD330/" + fname;
-
-                    htmlString += "<p>" + fname;
-                    htmlString += "<p>" + fpath;
-                }
-
-                document.getElementById('files').innerHTML = htmlString;
-            })()
-
-        }
-    </script>
+    <div id="pic">
+        <br>
+        <img id="avatar" style="height: 100px; width: 100px; border-radius: 30%;" src="data:image/jpeg;base64,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">
+    </div>
+    <div id="footer">
+        <footer>
+            <br>
+            Evan Brown | 4.18.2024
+        </footer>
+    </div>
 </body>
+
+<script>
+
+    function githubFilelist() {
+
+        var htmlString = "";
+
+        // this creates JS object 'data' with a list of files  
+        // change "aptokash/SD330" to your github id and repository name 
+        (async () => {
+            const response = await fetch("https://api.github.com/repos/evanbrown757/SD330/contents/");
+            const data = await response.json();
+
+            // loop through the list of files, set "file" to each file name
+            for (let file of data) {
+
+                fname = file.name;
+                fpath = "https://evanbrown757.github.io/SD330/" + fname;
+
+                htmlString += "<li> <a href=" + fpath + ">" + fname + "</a></li>";
+            }
+
+        document.getElementById("list").innerHTML = htmlString;
+        })()
+    }
+
+</script>
 
 </html>
