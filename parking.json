@@ -1,0 +1,173 @@
+{
+    "parking_lots": [
+        {
+            "name": "Foy",
+            "description": "Faculty",
+            "map": "foy.jpg",
+            "total_spaces": 25,
+            "open": true,
+            "notes": "students tend to still park here",
+            "spaces": [
+                {
+                    "id": 1,
+                    "type": "Handicap",
+                    "status": "Available",
+                    "fill_date_time": "",
+                    "reserve_date_time": "",
+                    "last_filled": "2024-04-16T10:06:37"
+                },
+                {
+                    "id": 2,
+                    "type": "Handicap",
+                    "status": "Reserved",
+                    "fill_date_time": "",
+                    "reserve_date_time": "2024-04-29T10:00:00",
+                    "last_filled": "2024-04-16T11:07:01"
+                },
+                {
+                    "id": 3,
+                    "type": "Normal",
+                    "status": "Available",
+                    "fill_date_time": "",
+                    "reserve_date_time": "",
+                    "last_filled": "2024-04-20T10:08:57"
+                },
+                {
+                    "id": 4,
+                    "type": "Normal",
+                    "status": "Available",
+                    "fill_date_time": "",
+                    "reserve_date_time": "",
+                    "last_filled": "2024-04-28T12:16:37"
+                },
+                {
+                    "id": 5,
+                    "type": "Normal",
+                    "status": "Available",
+                    "fill_date_time": "",
+                    "reserve_date_time": "",
+                    "last_filled": "2024-04-28T13:50:09"
+                },
+                {
+                    "id": 6,
+                    "type": "Normal",
+                    "status": "Available",
+                    "fill_date_time": "",
+                    "reserve_date_time": "",
+                    "last_filled": "2024-04-16T08:23:23"
+                },
+                {
+                    "id": 7,
+                    "type": "Normal",
+                    "status": "Available",
+                    "fill_date_time": "",
+                    "reserve_date_time": "",
+                    "last_filled": "2024-04-28T15:28:33"
+                },
+                {
+                    "id": 8,
+                    "type": "Normal",
+                    "status": "Filled",
+                    "fill_date_time": "2024-04-29T13:24:07",
+                    "reserve_date_time": "",
+                    "last_filled": "2024-04-29T13:24:07"
+                },
+                {
+                    "id": 9,
+                    "type": "Normal",
+                    "status": "Available",
+                    "fill_date_time": "",
+                    "reserve_date_time": "",
+                    "last_filled": "2024-04-29T09:26:54"
+                },
+                {
+                    "id": 10,
+                    "type": "Normal",
+                    "status": "Available",
+                    "fill_date_time": "",
+                    "reserve_date_time": "",
+                    "last_filled": "2024-04-28T13:59:26"
+                },
+                {
+                    "id": 11,
+                    "type": "Normal",
+                    "status": "Filled",
+                    "fill_date_time": "2024-04-29T16:45:01",
+                    "reserve_date_time": "",
+                    "last_filled": "2024-04-29T16:45:01"
+                },
+                {
+                    "id": 12,
+                    "type": "Normal",
+                    "status": "Reserved",
+                    "fill_date_time": "",
+                    "reserve_date_time": "2024-04-30T09:30:00",
+                    "last_filled": "2024-04-29T16:32:24"
+                }
+            ]
+        },
+        {
+            "name": "Riverview",
+            "description": "Faculty and Student",
+            "map": "riverview.jpg",
+            "total_spaces": 25,
+            "open": true,
+            "notes": "",
+            "spaces": []
+        },
+        {
+            "name": "Beck",
+            "description": "Student",
+            "map": "beck.jpg",
+            "total_spaces": 25,
+            "open": true,
+            "notes": "",
+            "spaces": []
+        },
+        {
+            "name": "Midrise",
+            "description": "Faculty and Visitor",
+            "map": "midrise.jpg",
+            "total_spaces": 25,
+            "open": true,
+            "notes": "",
+            "spaces": []
+        },
+        {
+            "name": "McCan",
+            "description": "Student",
+            "map": "mccan.jpg",
+            "total_spaces": 25,
+            "open": true,
+            "notes": "",
+            "spaces": []
+        },
+        {
+            "name": "Donelly",
+            "description": "Faculty",
+            "map": "donelly.jpg",
+            "total_spaces": 25,
+            "open": true,
+            "notes": "",
+            "spaces": []
+        },
+        {
+            "name": "Dyson",
+            "description": "Faculty",
+            "map": "dyson.jpg",
+            "total_spaces": 25,
+            "open": false,
+            "notes": "",
+            "spaces": []
+        },
+        {
+            "name": "Fontaine",
+            "description": "Faculty and Student",
+            "map": "fontaine.jpg",
+            "total_spaces": 25,
+            "open": false,
+            "notes": "",
+            "spaces": []
+        }
+    ]
+}
