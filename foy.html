@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+        intial-scale=1.0">
+    <title> Upark - Foy </title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="parking.html">Upark</a>
+        </div>
+        <div class="nav-items">
+            <a href="lots.html">park</a>
+            <a href="#map">map</a>
+            <a href="404.html">campus security</a>
+            <a href="404.html">help</a>
+            <a href="404.html">contact</a>
+            <a href="404.html">login</a>
+        </div>
+    </nav>
+    <section class="data">
+    <h1>Foy Parking Lot Information</h1>
+    <div id="foy-info"></div>
+
+    <script>
+        // fetch json file
+        fetch('https://evanbrown757.github.io/SD330//parking.json')
+            .then(response => response.json())
+            .then(data => {
+                // find foy lot data
+                const foyLot = data.parking_lots.find(lot => lot.name === "Foy");
+
+                if (foyLot) {
+                    // html display
+                    let foyInfoHTML = `
+            <p><strong>Description:</strong> ${foyLot.description}</p>
+            <p><strong>Total Spaces:</strong> ${foyLot.total_spaces}</p>
+            <p><strong>Open:</strong> ${foyLot.open ? 'Yes' : 'No'}</p>  
+            <p><strong></strong> <img src="${foyLot.map}" alt="Foy Parking Lot Map" width="400"></p>          
+            <h2>Spaces:</h2>
+            <ul>
+          `;
+
+                    // adding spaces
+                    foyLot.spaces.forEach(space => {
+                        foyInfoHTML += `
+              <li>
+                Space ${space.id} (${space.type}): ${space.status}
+        
+              </li>
+            `;
+            
+                    });
+
+                    foyInfoHTML += `</ul>`;
+                    document.getElementById('foy-info').innerHTML = foyInfoHTML;
+                } else {
+                    // error if foy not found
+                    document.getElementById('foy-info').innerHTML = "<p>Foy Parking Lot data not found.</p>";
+                }
+            })
+            .catch(error => {
+                //debug for error with json
+                console.error('Error fetching data:', error);
+                document.getElementById('foy-info').innerHTML = "<p>Error fetching Foy Parking Lot data.</p>";
+            });
+            
+    </script>
+    </section>
+    <footer class="footer">
+        &copy E. Brown 2024
+    </footer>
+</body>
+
+</html>
