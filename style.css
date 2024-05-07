@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+.footer {
+    background: #8B322C;
+    text-align: center;
+}
+
+nav {
+    height: 100px;
+    background: #FFC470;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 1.5rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p {
+    color: black
+}
+
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    padding: 12px;
+    width: 150px;
+    height: 50px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.intro {
+    background: #4793AF;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50vh;
+
+}
+
+h4 {
+    color: white;
+    font-size: x-large;
+}
+
+#slogan {
+    font-size: xxx-large;
+}
+
+.map-container {
+    background: #8B322C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    font-style: italic;
+}
+
+#map-img {
+    height: 750px;
+    width: 750px;
+}
+
+.error {
+    background: #4793AF;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+}
+
+.list {
+    height: 100vh;
+    background: #4793AF;
+}
+
+.lotsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.lot {
+    border-radius: 20px;
+    background-color: #f4511e;
+    border:none;
+    color: black;
+    text-align: center;
+    font-size:xx-large;
+    padding: 12px;
+    width: 400px;
+    height: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.lot span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    border:;
+}
+
+.lot span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.lot:hover span {
+    padding-right: 25px;
+    color:white;
+}
+
+.lot:hover span:after {
+    opacity: 1;
+    right: 0;
+}
